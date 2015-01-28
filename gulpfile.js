@@ -9,7 +9,7 @@ module.exports = function(gulp, elmClientFile) {
 
   gulp.task("elm-expressway_server", function () {
     server.run({
-      file: "lib/server.js"
+      file: "index.js"
     });
   });
 
