@@ -1,0 +1,42 @@
+{
+  "name": "elm-expressway",
+  "version": "0.0.1",
+  "description": "Scaffolding for multi-user Elm applications via Gulp, Express, and SockJS.",
+  "main": "index.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sonnym/elm-expressway.git"
+  },
+
+  "keywords": [
+    "elm",
+    "express",
+    "sockjs",
+    "scaffolding"
+  ],
+
+  "dependencies": {
+    "express": "*",
+
+    "sockjs": "*",
+
+    "gulp": "*",
+    "gulp-elm": "*",
+    "gulp-express": "*",
+
+    "elm-loader": "*"
+  },
+
+  "author": "Sonny Michaud <michaud.sonny@gmail.com> (https://github.com/sonnym)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sonnym/elm-expressway/issues"
+  },
+
+  "homepage": "https://github.com/sonnym/elm-expressway"
+}
