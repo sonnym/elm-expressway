@@ -1,6 +1,8 @@
 Elm Expressway
 ==============
 
+Get up and running on multi-user Elm applications in a few easy steps!
+
 Installation
 ------------
 
