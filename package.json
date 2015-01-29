@@ -28,8 +28,9 @@
     "gulp": "*",
     "gulp-elm": "*",
     "gulp-express": "*",
-
-    "elm-loader": "*"
+    "elm-loader": "*",
+    "execSync": "*",
+    "yeoman-generator": "*"
   },
 
   "author": "Sonny Michaud <michaud.sonny@gmail.com> (https://github.com/sonnym)",
