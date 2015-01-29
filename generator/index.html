@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title><%= appName %></title>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sockjs-client/0.3.4/sockjs.min.js" type="text/javascript"></script>
+    <script src="/Client.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="<%= appNameLowerCase %>" style="width: 600px; height: 400px"></div>
+  </body>
+
+  <script type="text/javascript">
+    var <%= appNameLowerCase %>Client;
+    var socket = new SockJS("/socket");
+
+    socket.onopen = function() {
+      var <%= appNameLowerCase %>Div = document.getElementById("<%= appNameLowerCase %>");
+
+      <%= appNameLowerCase %>Client = Elm.embed(Elm.<%= appName %>.Client, <%= appNameLowerCase %>Div, {
+        receiveState: "0"
+      });
+
+      <%= appNameLowerCase %>Client.ports.sendInput.subscribe(function(input) {
+        socket.send(JSON.stringify(input));
+      });
+    };
+
+    socket.onclose = function() { };
+
+    socket.onmessage = function(e) {
+      if (e.type !== "message") {
+        return;
+      }
+
+      <%= appNameLowerCase %>Client.ports.receiveState.send(e.data);
+    }
+  </script>
+</html>
