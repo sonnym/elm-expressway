@@ -20,4 +20,6 @@ module.exports = function(gulp, appName, elmClientFile) {
       .pipe(elm())
       .pipe(gulp.dest("public"));
   });
+
+  gulp.watch(path.join(appName, "**", "*.*"), ["elm-expressway_compile"]);
 };
