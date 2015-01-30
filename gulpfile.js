@@ -18,6 +18,9 @@ module.exports = function(gulp, appName, elmClientFile) {
   gulp.task("elm-expressway_compile", function() {
     return gulp.src(path.join(appName, elmClientFile))
       .pipe(elm())
+      .on("error", function(err) {
+        console.error(err.message);
+      })
       .pipe(gulp.dest("public"));
   });
 
