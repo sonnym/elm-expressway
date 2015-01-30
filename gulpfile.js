@@ -1,20 +1,22 @@
-var elm = require("gulp-elm");
-var server = require("gulp-express");
+var path = require("path");
 
-module.exports = function(gulp, elmClientFile) {
+var elm = require("gulp-elm");
+var nodemon = require("gulp-nodemon");
+
+module.exports = function(gulp, appName, elmClientFile) {
   gulp.task("elm-expressway_default", [
     "elm-expressway_server",
     "elm-expressway_compile"
   ]);
 
   gulp.task("elm-expressway_server", function () {
-    server.run({
-      file: "index.js"
+    return nodemon({
+      watch: ["index.js", path.join(appName, "**", "*")],
     });
   });
 
   gulp.task("elm-expressway_compile", function() {
-    return gulp.src(elmClientFile)
+    return gulp.src(path.join(appName, elmClientFile))
       .pipe(elm())
       .pipe(gulp.dest("public"));
   });

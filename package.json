@@ -29,8 +29,10 @@
 
     "gulp": "*",
     "gulp-elm": "*",
-    "gulp-express": "*",
+    "gulp-nodemon": "*",
+
     "elm-loader": "*",
+
     "execSync": "*",
     "yeoman-generator": "*"
   },
