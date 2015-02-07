@@ -2,7 +2,7 @@
 
 var path = require("path");
 
-var execSync = require("execSync");
+var execSync = require("child_process").execSync;
 
 var generatorFactory = require("yeoman-generator");
 var env = generatorFactory();
@@ -68,7 +68,7 @@ var generator = generatorFactory.Base.extend({
 
   installGulp: function() {
     this.log("\nInstalling 'gulp'...\n");
-    execSync.exec("npm install --save-dev gulp");
+    execSync("npm install --save-dev gulp");
   }
 });
 

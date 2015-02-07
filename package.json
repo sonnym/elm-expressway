@@ -33,7 +33,6 @@
 
     "elm-loader": "*",
 
-    "execSync": "*",
     "yeoman-generator": "*"
   },
 
@@ -43,5 +42,7 @@
     "url": "https://github.com/sonnym/elm-expressway/issues"
   },
 
-  "homepage": "https://github.com/sonnym/elm-expressway"
+  "homepage": "https://github.com/sonnym/elm-expressway",
+
+  "engines": { "node": ">=0.12" }
 }
