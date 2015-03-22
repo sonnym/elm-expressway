@@ -1,6 +1,6 @@
 {
   "name": "elm-expressway",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Scaffolding for multi-user Elm applications via Gulp, Express, and SockJS.",
   "main": "index.js",
   "bin": {
